@@ -21,6 +21,7 @@ public class MainCelActivity extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View Rview = inflater.inflate(R.layout.maincelactivity, container, false);
 
+
         return Rview;
     }
 }

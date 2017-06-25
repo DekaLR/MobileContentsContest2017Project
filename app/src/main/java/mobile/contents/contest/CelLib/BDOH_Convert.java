@@ -6,8 +6,6 @@ package mobile.contents.contest.CelLib;
 
 public class BDOH_Convert {
 
-
-
     /*    Integer클래스에 해당 기능을 지원하는 메소드가 있습니다. toBinaryString, toOctalString, toHexString이 있는데요.
     각각 이름에서 알 수 있듯이 2진수 8진수 16진수로 바꿔주는 메소드입니다.
 
