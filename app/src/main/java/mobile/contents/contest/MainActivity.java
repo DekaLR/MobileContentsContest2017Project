@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import mobile.contents.contest.FragmentActivitys.MainCelActivity;
 import mobile.contents.contest.FragmentActivitys.MainConvertActivity;
@@ -60,7 +61,11 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            Toast.makeText(this, "Back 버튼을 한번 더 누르시면 종료됩니다", Toast.LENGTH_SHORT).show();
+
+            moveTaskToBack(true);
+            finish();
+            //android.os.Process.killProcess(android.os.Process.myPid());
         }
     }
 
@@ -128,7 +133,7 @@ public class MainActivity extends AppCompatActivity
         if(fragment != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.mainfragment, fragment);
-            //ft.addToBackStack(null); //text code
+            ft.addToBackStack(null); //text code
             ft.commit();
         }
 
